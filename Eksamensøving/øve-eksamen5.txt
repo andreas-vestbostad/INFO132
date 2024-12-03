@@ -1,0 +1,60 @@
+1 en prosedyre
+2 et flyttall
+3 En operator har ulik betydning i ulike sammenhenger
+4 ValueError: ...
+5 self
+6 '3131'
+7 3
+8 1
+9 str
+10 not > and > or
+11 PEMDAS > sammenligninger > logiske operatorer
+12 (((9+(11*4))-(2**3))+((8/4)*2))
+13 *Betinget uttrykk ("conditional expression")
+14 *Betinget uttrykk ("conditional expression")
+15 *Betinget alternativ utførelse ("chained conditional")
+16 variabelverdier
+17 en parameter
+18 en standardverdi
+19 vi skal bruke x i nærmeste omsluttende skop
+20 16 36
+21 *Når betingelse evalueres til False utføres kropp og løkken avsluttes
+22 Avsluttter runden med det samme men fortsetter løkken
+23 Avsluttter løkken med det samme
+24 tall er en sekvens av ukjent lengde
+25 ValueError: ...
+26 None
+27 None
+28 False
+29 'bool'
+30 <class 'function'>
+31 Et variabelnavn
+32 Metoder og attributter
+33 Den kan inneholde alle disse
+34 random
+35 'mmr'
+36 'xxx 3.141 yyy'
+37 Hvis filen ikke finnes gjøres unntak
+38 Hvis filen ikke finnes blir den opprettet
+39 Skriver ut antall tegn i fil
+40 Går i løkke gjennom filen linje for linje
+41 Nødvendig for append og write
+42 False
+43 True
+44 ekvivalente men ikke nødvendigvis identiske
+45 ekvivalente og identiske
+46 Ekvivalente, men neppe identiske
+47 Hverken ekvivalente eller identiske
+48 Ja, hvis argumentet har globalt skop
+49 Key error: '4'
+50 4
+51 ('løping', 4)
+52 Screen
+53 Skjermelement, hendelse og hendelseshåndterer
+54 En av dem (eller en lignende metode) må kalles før et element vises
+55 Entry
+56 forandrbar, men ikke en sekvenstype
+57 {'b', 'a', 'r'}
+58 '(lambda x: x*x)(3)'
+59 [0, 1, 2]
+60 [['A1', 'B1', 'C1'], ['A2', 'B2', 'C2'], ['A3', 'B3', 'C3']]

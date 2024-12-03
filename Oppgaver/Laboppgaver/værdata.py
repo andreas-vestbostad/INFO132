@@ -1,0 +1,15 @@
+ManTemp=10.1
+ManNedbør=3.5
+ManVind=8.1
+TirTemp=12.1
+TirNedbør=10.5
+TirVind=12.9
+OnsTemp=13
+OnsNedbør=3.9
+OnsVind=12.1
+TorTemp=12.9
+TorNedbør=0
+TorVind=5.4
+FreTemp=11.2
+FreNedbør=0.1
+FreVind=5.2

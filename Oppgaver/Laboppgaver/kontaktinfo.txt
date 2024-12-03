@@ -1,0 +1,13 @@
+Kari Telefon: 98654321 Adresse: Tulleveien 9
+Liv Telefon: 99776655 Adresse: Månebakken 4
+Ola Telefon: 99112233 Adresse: Langbakken 1
+Anne Telefon: 98554455 Adresse: Ingen adresse
+Jens Telefon: 99776612 Adresse: Solgata 6
+Per Telefon: 97888776 Adresse: Nedvei 5
+Else Telefon: 99455443 Adresse: Elsesro 9
+Jon Telefon: 98122134 Adresse: Ingen adresse
+Dag Telefon: 99655732 Adresse: Ingen adresse
+Siv Telefon: 98787896 Adresse: Ingen adresse
+Anders Telefon: Ingen telefon Adresse: Langgangen 2
+Berit Telefon: Ingen telefon Adresse: Bredstredet 4
+Hans Telefon: Ingen telefon Adresse: Kirkegata 3

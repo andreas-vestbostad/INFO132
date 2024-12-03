@@ -1,0 +1,21 @@
+1001 Python for Everybody 2016
+1002 Practical SQL 2018
+1003 Mining Social Media 2020
+1004 SQL Queries for mere mortals 2018
+1005 Pandas for Everyone 2018
+1006 Python for Everyone 2016
+1007 Python Crash Course 2019
+1008 Data Science from Scratch 2015
+1009 Computational Social Science 2016
+1010 Bit by Bit, social research in the digital age 2018
+1011 Relational Knowledge Discovery 2012
+1012 Introduction to machine learning with Python 2017
+1013 Sets, Logic and Maths for computing 2012
+1014 Knowledge representation and reasoning 2004
+1015 Computation, Proof, Machine 2015
+1016 Set theory, logic and their limitations 1996
+1017 Proofs and algorithms 2011
+1018 Artificial Intelligence 2010
+2001 Beginning XML 2012
+2002 Introduction to JavaScript Object Notation 2015
+2003 Discrete mathematical structures 2004

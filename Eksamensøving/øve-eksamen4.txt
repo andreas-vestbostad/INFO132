@@ -1,0 +1,134 @@
+Oppgave 1
+a)
+    1. Tuppel - Uforanderlige lister. Kan indekseres, tas utsnitt av og inneholde duplikate verdier. Har ikkje metodene append(), pop(), remove() eller andre metoder som forandrer innholdet slik som lister.
+
+    2. Aliaser - To variabler som referer til same objekt. 
+
+    3. Iterasjon - "En iterasjon" er en runde i en løkke. Iterering handler om å gå over elementer. Brukes i blant annet for-løkker for uføre en eller flere programsetninger for hvert element i en liste.
+
+    4. .items() en en metode som kan brukes på fortegnelser for å hente (nøkkel, verdi)-par. Nyttig når man vil iterere over alle nøkkel:verdi elementene i en fortegnelse og ha tilgang til begge deler. Eksempel: for nøkkel, verdi in fortegnelse.items(): print(verdi, nøkkel)
+
+    5. Rekursjon - Funksjon som har et eller flere kall på seg selv. 
+
+b)
+    1. Lokal variabel er kun tilgjengelig eit lokalt skop, dvs. i en funksjon. Dersom man prøver å endre eller bruke en variabel som er definert utenfor funksjonen og ikke i, vil man få en feilmld. Ein unngår dette ved å bruke det reserverte nøkkelordet global for å utvide skopet og gjøre ein lokal variabel global. Globale variabler er tilgjengelig i det globale skopet (utenfor funksjoner), men ikke i de lokale.
+
+    2. break avslutter gjeldene runde og hele løkken umiddelbart. Continue avslutter gjeldende runde, men fortsetter på neste runde i løkken.
+
+    3. Klasse-attributter er gjeldene for alle instanser, gitt at de ikke er endret på i instansen. Instans-attributter er kun gjeldende for den aktuelle instansen
+
+    4. Tomme funksjoner har kun ein effekt og ikkje et resultat. Dvs at dei ikkje retunerer noe (tomme funksjoner retunerer None). Resultat funksjoner inneholder en return som retunerer en eller flere verdier tilbake til funksjonskallet.
+
+c) 
+    1. Usant
+    2. Sant
+    3. Usant
+    4. Usant
+    5. Sant
+    6. Usant
+    7. Usant
+    8. Sant
+    9. Usant
+    10. Usant
+
+d)
+    1. 0 (1)
+    2. 6 (1)
+    3. 1*man/4*tir/3*ons/1*tor/2*fre/ (1)
+    4. [22, 'elleveelleve', '1111'] (1)
+    5. True True (1)
+    6. ['fire', 'fem', 'seks', 'en', 'tre', 'en', 'tre'] (1)
+    7. [1, 2, 3, 4, 5, 6] (1)
+    8. b (4)
+    9. 6 (1)
+    10. [(2, 1), (3, 1), (3, 2), (4, 1), (4, 2), (4, 3)] (1)
+
+e)
+    metode -> self
+    elif -> else
+    .write -> fil
+    variabel -> skop
+    fortegnelse -> .keys
+    return -> funksjon
+    tekststreng -> .strip
+    tkinter -> GUI
+    continue -> iterasjon
+    super -> subklasse
+
+Oppgave 2
+a)
+    #definerer funksjon som tar inn ei liste som parameter
+    def skrivIndeks(liste):
+        #itererer over listen. i er til enhver tid lik runde nr (starter på 0)
+        for i in range(len(liste)):
+            #printer ut i+1 siden i starter på 0 og slutter på len(liste)-1
+            print(i+1, liste[i])
+
+b)
+    def samleTekster(liste):
+        #bruker den innbygde metoden .join
+        return " ".join(liste)
+
+c)
+    def samleLister(lister):
+        #bruker listebygger til å utføre samleTekster-funskjonen på alle sub-listene
+        return [samleTekster(liste) for liste in lister]
+
+d)
+    def midtsegment(liste, antall):
+        if len(liste) <= antall*2: return [] #strengt tatt ikke nødvendig da man ikke får out-of-range på utsnitt av lister 
+        return liste[antall:-antall]
+
+e)
+    def fjernduplikater(liste):
+    #omgjer til mengde, som fjerner duplikat, så tilbake til liste
+    return list(set(liste))
+
+Oppgave 3
+a)
+    def bokFortegnelse(filnavn):
+        #oppretter tom fortegnelse for å lagre dataen
+        fortegnelse = {}
+
+        with open(filnavn, 'r') as fil:
+            for linje in fil:
+                #fjerner linjeskift og eventuelle mellomrom
+                linje = linje.strip()
+                #deler opp informasjon fra linje og oppretter variabler
+                id, *tittel, år_utgitt = linje.split()
+                #test som hopper over linje dersom fortegnelsen allerede innholder id'en.
+                if id in fortegnelse: continue
+                #legger til id'en som nøkkel i fortegnelse og en ny fortegnelse med tittel og år utgitt som verdi.
+                fortegnelse[id] = {'tittel': ' '.join(tittel), 'utgitt': år_utgitt}
+
+        return fortegnelse
+
+b)
+    #fortegnelser er tilgjengelige i lokalt skop. Kunne hatt parametre dersom ein ynskja mulighet til å bruke ulike fortegnelser
+
+    def oversikt():
+        fortegnelse = {}
+
+        for id in bøker:
+            for tema in temaer[id]:
+                if tema not in fortegnelse:
+                    fortegnelse[tema] = {}
+
+                if bøker[id]['utgitt'] not in fortegnelse[tema]: 
+                    fortegnelse[tema][bøker[id]['utgitt']] = 0
+
+                fortegnelse[tema][bøker[id]['utgitt']] += 1
+
+        sortert_fortegnelse = sorted(fortegnelse.items(), key=lambda x: (x[0], min(x[1].keys())))
+
+        for tema, verdi in sortert_fortegnelse:
+            for år, antall in verdi.items():
+                print(f'{tema}, {år}: {antall}')
+
+c)
+    A -> f2
+    B -> f4
+    C -> f1
+    D -> f6
+    E -> f5
+    F -> f3

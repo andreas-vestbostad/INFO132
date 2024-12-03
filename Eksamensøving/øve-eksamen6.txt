@@ -1,0 +1,117 @@
+Oppgave 1
+a)
+    1. Variabel - er en navngitt lagerplass i primærminnet og fungerer som en referanse til en verdi. Tilordning må være på formen 'variabelnavn = verdi', der variabelnavn kun kan inneholde tall, bokstaver eller understrek (_) og kan ikke starte med tall. Python skiller mellom store og små bokstaver i variabelnavn.
+
+    2. GUI-element eller widgets er elementer i tkinter som f.eks Button, Label, Entry, Radiobutton som brukeren interakterer med.
+
+    3. Fortegnelse er dataobjekter med nøkkel:verdi par. Fortegnelser reknes som foranderlige, men nøkkelen er uforanderlig og må derfor være av en uforanderlig type. Man kan heller ikke ha ekvivalente nøkler. Verdiene er foranderlige.
+
+    4. Break og continue er begge reserverte nøkkelord i python. Break avslutter en løkke utmiddelbart, medan continue avslutter gjeldene runde (iterasjon)
+
+    5. Arv - Sub-klasser som har arvet metoder og attributter fra en overordnet super-klasse. 
+
+b) 
+    liste -> append
+    iterasjon -> break
+    modul -> import
+    GUI -> mainloop()
+    operatorpresedens -> PEMDAS
+    funksjon -> return
+    fil -> open
+    klasse -> super()
+    bool'ske uttrykk -> False
+    fortegnelse (dictionary) -> items()
+
+c) 
+    1: 0 (3)
+    2: Returnerer en resultatverdi og kan ha side-effekter (2)
+    3: 8 (1)
+    4: En verdi om overføres til en funksjon i et funksjonskall (4)
+
+d)
+    1: Ja, teksten har en spesifikk lagerplass i primærlageret, ikke nødvendigvis sant for lange setninger. Både x og y peker til samme lagerplass
+
+    2: Nei, listene er lagret på ulik lagerplass. x og y er ekvivalende ikke identiske.
+
+    3: Ja, samme som i 1). x og y peker til samme lagerplass
+
+    4: Ja, x og y referer til samme liste og derfor samme lagerplass.
+
+Oppgave 2
+a) 
+    1: 6
+    2: [3,'fire']
+    3: 3
+    4: 12
+    5:  "1:1"
+        "2:4"
+        "3:9"
+
+b)
+    for x in [a,b]:
+        print(i,x)
+
+    #alternativt
+    print(i, 'a')
+    print(i, 'b')
+
+c)
+    from tkinter import *
+
+    def opne():
+        topp = Toplevel()
+
+        tekst = Label(topp, text='Takk!')
+        tekst.grid(column=0, row=0)
+
+    vindu = Tk()
+
+    knapp = Button(vindu, text='Trykk her', command=opne)
+    knapp.grid(column=0,row=0)
+
+    vindu.mainloop()
+
+d)
+    def bytt(liste):
+        liste[0], liste[-1] = liste[-1], liste[0]
+        return liste
+
+Oppgave 3
+a)
+    def forfatterListe(fortegnelse):
+        forfattere = set()
+        for forfatter in fortegnelse.values()
+            forfattere.add(forfatter)
+
+        return sorted(list(forfattere))
+
+b)
+    def fans(fortegnelse):
+        fans_fortegnelse = {}
+
+        for fan, forfatter in fortegnelse.items():
+            if forfatter not in fans_fortegnelse: 
+                fans_fortegnelse[forfatter] = []
+            fans_fortegnelse[forfatter].append(fan)
+
+        return fans_fortegnelse
+
+c)
+    def favorittBøker(fortegnelse, filnavn):
+        forfatter_bøker_fortegnelse = {}
+
+        with open(filnavn, 'r') as fil:
+            for linje in fil:
+                linje = linje.strip()
+                forfatter, bok = linje.split(',', maxsplit=1)
+                if forfatter not in forfatter_bøker_fortegnelse:
+                    forfatter_bøker_fortegnelse[forfatter] = []
+                forfatter_bøker_fortegnelse[forfatter].append(bok)
+        
+        favoritt_bøker = {}
+        for person, forfatter in fortegnelse.items():
+            if person not in favoritt_bøker:
+                favoritt_bøker[person] = []
+            favoritt_bøker[person] += forfatter_bøker_fortegnelse[forfatter]
+
+        return favoritt_bøker
